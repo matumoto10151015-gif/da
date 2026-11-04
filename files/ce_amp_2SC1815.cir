@@ -1,0 +1,15 @@
+* Common-emitter amplifier (netlist reconstructed from schematic image)
+Vi in 0 SINE(0 10m 1k) AC 1
+ECE vcc 0 6
+C1 in b 10u
+R1 vcc b 39k
+R2 b 0 18k
+RC vcc c 2.7k
+Q1 c b e 2SC1815-Y
+RE e 0 1k
+CE e 0 100u
+CL c out 10u
+RL out 0 1Meg
+.lib 2SC1815-Y.lib
+.tran 5m
+.end

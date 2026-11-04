@@ -1,0 +1,39 @@
+\documentclass[a4paper,xelatex,ja=standard]{bxjsreport}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[hang,small,bf]{caption}
+\usepackage[subrefformat=parens]{subcaption}
+\captionsetup{compatibility=false}
+%\usepackage{pdflscape}
+\usepackage{lscape}
+\usepackage{ceexp_style}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%sectionの番号など　必ず編集する（I-1部分）
+\setcounter{secnumdepth}{3}
+\renewcommand{\thesection}{II-5.\arabic{section} \kern-2ex}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection} \kern-2ex}
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection} \kern-2ex}
+%参考文献の番号
+\renewcommand{\labelenumi}{[\arabic{enumi}]}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resetrefs
+\input{exp_1} %exp_1.texの内容を呼ぶ
+\newpage %改ページを入れる
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%sectionの番号など　必ず編集する（I-2部分）
+%\setcounter{secnumdepth}{3}
+\renewcommand{\thesection}{II-6.\arabic{section} \kern-2ex}
+%\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection} \kern-2ex}
+%\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection} \kern-2ex}
+%参考文献の番号
+\renewcommand{\labelenumi}{[\arabic{enumi}]}
+\setcounter{section}{0}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resetrefs
+\input{exp_2} %exp_2.texの内容を呼ぶ
+
+\end{document}
